@@ -6958,12 +6958,11 @@ public class DefaultCodegen implements CodegenConfig {
 
         if (!properties.isEmpty()) {
             for (Map.Entry<String, Schema> entry : properties.entrySet()) {
-                CodegenParameter codegenParameter;
                 // key => property name
                 // value => property schema
                 String propertyName = entry.getKey();
                 Schema propertySchema = entry.getValue();
-                codegenParameter = fromFormProperty(propertyName, propertySchema, imports);
+                CodegenParameter codegenParameter = fromFormProperty(propertyName, propertySchema, imports);
 
                 if (isOneOfOrAnyOf) {
                     // for oneOf/anyOf, mark all the properties collected from the sub-schemas as optional

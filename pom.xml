@@ -175,7 +175,7 @@
                     <useSystemClassLoader>false</useSystemClassLoader>
                     <junitArtifactName>none:none</junitArtifactName>
                     <testNGArtifactName>org.testng:testng</testNGArtifactName>
-                    <argLine>@{argLine} -XX:+StartAttachListener</argLine>
+                    <argLine>@{argLine} -XX:+StartAttachListener-Xmx16g</argLine>
                     <rerunFailingTestsCount>2</rerunFailingTestsCount>
                     <systemPropertyVariables>
                         <org.openapitools.codegen.utils.oncelogger.expiry>1000</org.openapitools.codegen.utils.oncelogger.expiry>
@@ -1424,6 +1424,13 @@
                 <version>${openrewrite.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+            <groupId>org.rediscover4j</groupId>
+            <artifactId>reDiscover4j</artifactId>
+            <version>0.0.1</version>
+            <scope>system</scope>
+            <systemPath>/Users/meganm/Repos/DTC/reDiscover4j/lib/build/libs/reDiscover4j-0.0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
         </dependencies>
     </dependencyManagement>
     <repositories>
